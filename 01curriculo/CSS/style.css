@@ -1,0 +1,101 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  background-color: #020d3f;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container-main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+header {
+  background-color: #ffffff;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+}
+
+header h1 {
+  color: #020d3f;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+section, article, aside {
+  background: #f9f9f9;
+  margin-bottom: 1.5rem;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+section h2, article h2, aside h2 {
+  color: #020d3f;
+  margin-bottom: 0.8rem;
+  font-size: 1.5rem;
+  border-bottom: 2px solid #020d3f;
+  padding-bottom: 0.3rem;
+}
+
+footer {
+  background: #111c5d;
+  color: white;
+  padding: 1rem;
+  text-align: left;
+  border-radius: 12px;
+  margin-top: 2rem;
+}
+
+footer h2 {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+
+footer iframe{
+    float: left;
+    width:50% ;
+    height: 80%;
+    margin: 10px;
+    margin-left: 100px;
+}
+
+p {
+  margin-bottom: 0.8rem;
+}
+
+.continer-body {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1.5rem;
+}
+
+aside img {
+  width: 250px;   
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
+article img {
+    width: 250px;   
+  height: auto;
+  border-radius: 10px;
+  display: block;
+  margin: 0 auto;
+}
