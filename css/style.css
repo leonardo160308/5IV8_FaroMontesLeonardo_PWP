@@ -1,4 +1,55 @@
-*{
-    background-color: rgb(137, 36, 231);
-    font-size: 20px;;
+*{ 
+  padding: 0px;
 }
+
+body {
+    font-family: "Courier New", monospace;
+    background-color: #000000; 
+    
+}
+h2{
+text-shadow: 0 0 15px #c400ff, 0 0 10px #ff00ff;
+
+}
+header {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #c400ff;
+}
+
+p, a {
+    color: #9b00ff;
+    text-shadow: 0 0 5px #c400ff;
+}
+
+a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+    text-decoration: underline;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px dashed #ff00ff;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #c400ff;
+    text-align: left;
+    color: #9b00ff;
+    text-shadow: 0 0 5px #c400ff;
+}
+
+.main {
+    border: 2px dashed #ff00ff;
+    background-color: #000000;
+    box-shadow: 0 0 10px #c400ff;
+}
+
+
+

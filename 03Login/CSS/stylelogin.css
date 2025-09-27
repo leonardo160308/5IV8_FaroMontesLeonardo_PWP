@@ -24,7 +24,7 @@ body{
     font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
     font-size: 15px;
-    padding-top: 15px;
+    padding-top: 7px;
     color: blueviolet;
 }
 
@@ -73,6 +73,7 @@ body{
     border-radius: 15px;
     width: 120px;
     height: 35px;
+    margin-top: 10px;
 }
 .button p{
     margin-top: 8px;
@@ -84,8 +85,7 @@ body{
     float: left;
 }
 a{
-    margin-top: 20px;
-    float: left;
+    float: center;
     margin-left:60px;
-    color:cornsilk;
+    color:rgb(223, 185, 34);
 }
