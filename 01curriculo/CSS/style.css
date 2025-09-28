@@ -1,4 +1,3 @@
-/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +8,53 @@ html, body {
   background-color: #020d3f;
   color: #333;
   line-height: 1.6;
+  font-family: Arial, sans-serif;
 }
+
+
+.container-header {
+  background-color: #ffffff;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  text-align: center;
+  position: relative;
+}
+
+.container-header h1 {
+  color: #020d3f;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.container-header img {
+  width: 150px;
+  border-radius: 50%;
+  border: 3px solid #020d3f;
+  display: block;
+  margin: 0.5rem auto;
+}
+
+.container-nav ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+
+.container-nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.container-nav ul li a {
+  color: #020d3f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.container-nav ul li a:hover {
+  text-decoration: underline;
+}
+
 
 .container-main {
   max-width: 900px;
@@ -17,34 +62,15 @@ html, body {
   padding: 1rem;
 }
 
-header {
-  background-color: #ffffff;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  border-radius: 12px;
-}
-
-header h1 {
-  color: #020d3f;
-  font-size: 2rem;
-  margin-bottom: 0.5rem;
-}
-
-nav {
-  font-size: 1.1rem;
-  color: #555;
-}
-
-section, article, aside {
+.container-main section {
   background: #f9f9f9;
   margin-bottom: 1.5rem;
   padding: 1.2rem;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  text-align: left;
 }
 
-section h2, article h2, aside h2 {
+.container-main section h2 {
   color: #020d3f;
   margin-bottom: 0.8rem;
   font-size: 1.5rem;
@@ -52,50 +78,45 @@ section h2, article h2, aside h2 {
   padding-bottom: 0.3rem;
 }
 
-footer {
+.container-main ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+}
+
+.container-main p {
+  margin-bottom: 0.8rem;
+}
+
+.container-footer {
   background: #111c5d;
   color: white;
-  padding: 1rem;
-  text-align: left;
+  padding: 1.5rem;
+  text-align: center;
   border-radius: 12px;
   margin-top: 2rem;
 }
 
-footer h2 {
-  font-size: 1rem;
-  font-weight: normal;
+.container-footer h3 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
-
-footer iframe{
-    float: left;
-    width:50% ;
-    height: 80%;
-    margin: 10px;
-    margin-left: 100px;
+.container-footer ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
 }
 
-p {
-  margin-bottom: 0.8rem;
+.container-footer ul li {
+  display: inline-block;
+  margin: 0 10px;
 }
 
-.continer-body {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1.5rem;
+.container-footer a {
+  color: white;
+  text-decoration: none;
 }
 
-aside img {
-  width: 250px;   
-  height: auto;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto;
-}
-article img {
-    width: 250px;   
-  height: auto;
-  border-radius: 10px;
-  display: block;
-  margin: 0 auto;
+.container-footer a:hover {
+  text-decoration: underline;
 }
