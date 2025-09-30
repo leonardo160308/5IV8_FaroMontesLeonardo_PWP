@@ -1,15 +1,29 @@
 *{ 
   padding: 0px;
 }
-
+@font-face{
+font-family: "Personalizado2";
+src: url(/font/Bytesized/Bytesized-Regular.ttf);
+}
+p,a,body{
+    font-family: "Personalizado", system-ui;
+}
 body {
     font-family: "Courier New", monospace;
-    background-color: #000000; 
+    background-color: #000000;
+    color: #c400ff; 
     
 }
+
 h2{
 text-shadow: 0 0 15px #c400ff, 0 0 10px #ff00ff;
-
+}
+h2,header,th,td{
+    font-family: "Personalizado2", system-ui;
+}
+@font-face {
+    font-family:"Personalizado";
+    src: url(/font/BitcountPropSingleInk-VariableFont_CRSV\,ELSH\,ELXP\,SZP1\,SZP2\,XPN1\,XPN2\,YPN1\,YPN2\,slnt\,wght.ttf);
 }
 header {
     font-size: 3rem;
@@ -17,6 +31,9 @@ header {
     margin-bottom: 20px;
     color: #ff00ff;
     text-shadow: 0 0 10px #ff00ff, 0 0 20px #c400ff;
+}
+img{
+    width: 30px;
 }
 
 p, a {
