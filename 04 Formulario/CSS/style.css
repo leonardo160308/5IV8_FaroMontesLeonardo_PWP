@@ -1,0 +1,135 @@
+*{ 
+  padding: 0px;
+}
+
+
+@font-face{
+  font-family: "Personalizado2";
+  src: url(/font/Bytesized/Bytesized-Regular.ttf);
+}
+
+@font-face {
+  font-family:"Personalizado";
+  src: url(/font/BitcountPropSingleInk-VariableFont_CRSV\,ELSH\,ELXP\,SZP1\,SZP2\,XPN1\,XPN2\,YPN1\,YPN2\,slnt\,wght.ttf);
+}
+
+p,a,body,h1{
+  font-family: "Personalizado", system-ui;
+}
+
+body {
+  font-family: "Courier New", monospace;
+  background-color: #000000;
+  color: #c400ff; 
+}
+
+
+h2{
+  text-shadow: 0 0 15px #c400ff, 0 0 10px #ff00ff;
+}
+h2,header,th,td,ol {
+  font-family: "Personalizado2", system-ui;
+}
+
+header {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff, 0 0 20px #c400ff;
+}
+
+
+p, a {
+  color: #9b00ff;
+  text-shadow: 0 0 5px #c400ff;
+}
+
+a:hover {
+  color: #ff00ff;
+  text-shadow: 0 0 10px #ff00ff;
+  text-decoration: underline;
+}
+
+
+.container-form {
+  max-width: 400px;
+  margin: 30px auto;
+  padding: 25px;
+  border: 2px dashed #ff00ff;
+  background-color: #000000;
+  box-shadow: 0 0 15px #c400ff;
+  border-radius: 10px;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+  font-family: "Personalizado2", system-ui;
+  color: #ff00ff;
+  text-shadow: 0 0 5px #c400ff;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  background: #000000;
+  border: 1px solid #c400ff;
+  border-radius: 5px;
+  color: #9b00ff;
+  font-family: "Courier New", monospace;
+  text-shadow: 0 0 5px #c400ff;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus {
+  border-color: #ff00ff;
+  outline: none;
+  box-shadow: 0 0 8px #ff00ff;
+  color: #ff00ff;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  width: 48%;
+  padding: 10px;
+  margin: 5px 1%;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: "Personalizado2", system-ui;
+  color: #ffffff;
+  text-shadow: 0 0 5px #000000;
+  transition: all 0.3s ease;
+}
+
+input[type="submit"] {
+  background: #9b00ff;
+  box-shadow: 0 0 10px #c400ff;
+}
+
+input[type="submit"]:hover {
+  background: #6b00b3;
+  box-shadow: 0 0 15px #ff00ff;
+}
+
+input[type="reset"] {
+  background: #ff00ff;
+  box-shadow: 0 0 10px #c400ff;
+}
+
+input[type="reset"]:hover {
+  background: #b300b3;
+  box-shadow: 0 0 15px #ff00ff;
+}
+footer{
+    background-color: #6b00b3;
+    text-align: center;
+    border-radius: 1rem;
+}
