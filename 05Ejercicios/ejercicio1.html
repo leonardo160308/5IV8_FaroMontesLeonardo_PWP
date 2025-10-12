@@ -1,53 +1,221 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejercicio 1</title>
+    <title>Ejercicios de Cálculo</title>
+    <link rel="stylesheet" href="./CSS/style.css">
 </head>
 <body>
     <div class="container">
-        <form method="post" name="formulario" action="">
-            <label for=""> Formulario para calculo de inversiones banco kawaii con un incremento del 8.05% anual</label>
-            <br>
+
+        <form name="form1">
+            <label>Inversión con interés mensual del 2%</label><br>
             <div class="container-table">
                 <table class="table">
                     <tr>
-                        <td>
-                            Introduce la cantidad que deseas invertir por todo un año:
-                        </td>
-                        <td>
-                            <input type="text" name="cantidad" id="cantidadi" onkeypress="return validarn(event)">
-                        </td>
+                        <td>Cantidad a invertir:</td>
+                        <td><input type="text" id="cantidadInv" onkeypress="return validarn(event)"></td>
                     </tr>
                     <tr>
-                        <td>
-
-                        </td>
-                        <td>
-                            <input type="button" name="enviar" value="Calcular Interés" onclick="interes()">
-                        </td>
+                        <td></td>
+                        <td><input type="button" value="Calcular Ganancia" onclick="interesMensual()"></td>
                     </tr>
                     <tr>
-                        <td>
-                            Su saldo total con el interes es de:
-                        </td>
-                        <td>
-                            <input type="text" name="sueldoi" id="saldoi" readonly="readonly" class="input_text">
-                        </td>
+                        <td>Total después de un mes:</td>
+                        <td><input type="text" id="totalInv" readonly></td>
                     </tr>
                     <tr>
-                        <td>
-
-                        </td>
-                        <td>
-                           <input type="button" value="Borrar Datos" name="borrar" onclick="borrarf()"> 
-                        </td>
+                        <td></td>
+                        <td><input type="button" value="Borrar Datos" onclick="borrarInv()"></td>
                     </tr>
                 </table>
             </div>
         </form>
+
+        <hr>
+
+        
+        <form name="form2">
+            <label>Sueldo con comisiones (10%)</label><br>
+            <div class="container-table">
+                <table class="table">
+                    <tr>
+                        <td>Sueldo base:</td>
+                        <td><input type="text" id="sueldoBase" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td>Venta 1:</td>
+                        <td><input type="text" id="venta1" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td>Venta 2:</td>
+                        <td><input type="text" id="venta2" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td>Venta 3:</td>
+                        <td><input type="text" id="venta3" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Calcular Sueldo Total" onclick="comisiones()"></td>
+                    </tr>
+                    <tr>
+                        <td>Comisiones Totales:</td>
+                        <td><input type="text" id="comisionesTotal" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>Sueldo Final:</td>
+                        <td><input type="text" id="sueldoFinal" readonly></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Borrar Datos" onclick="borrarComisiones()"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+
+        <hr>
+
+        
+        <form name="form3">
+            <label>Descuento del 15% sobre el total de la compra</label><br>
+            <div class="container-table">
+                <table class="table">
+                    <tr>
+                        <td>Total de la compra:</td>
+                        <td><input type="text" id="totalCompra" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Calcular Descuento" onclick="descuento()"></td>
+                    </tr>
+                    <tr>
+                        <td>Precio final:</td>
+                        <td><input type="text" id="precioFinal" readonly></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Borrar Datos" onclick="borrarDescuento()"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+
+        <hr>
+
+        <form name="form4">
+            <label>Calificación final en Algoritmos</label><br>
+            <div class="container-table">
+                <table class="table">
+                    <tr>
+                        <td>Parcial 1:</td>
+                        <td><input type="text" id="parcial1" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td>Parcial 2:</td>
+                        <td><input type="text" id="parcial2" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td>Parcial 3:</td>
+                        <td><input type="text" id="parcial3" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td>Examen final:</td>
+                        <td><input type="text" id="examenFinal" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td>Trabajo final:</td>
+                        <td><input type="text" id="trabajoFinal" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Calcular Calificación Final" onclick="calificacionFinal()"></td>
+                    </tr>
+                    <tr>
+                        <td>Calificación final:</td>
+                        <td><input type="text" id="resultadoFinal" readonly></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Borrar Datos" onclick="borrarCalificacion()"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+
+        <hr>
+
+        
+        <form name="form5">
+            <label>Porcentaje de hombres y mujeres</label><br>
+            <div class="container-table">
+                <table class="table">
+                    <tr>
+                        <td>Número de hombres:</td>
+                        <td><input type="text" id="hombres" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td>Número de mujeres:</td>
+                        <td><input type="text" id="mujeres" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Calcular Porcentajes" onclick="porcentajes()"></td>
+                    </tr>
+                    <tr>
+                        <td>Porcentaje de hombres:</td>
+                        <td><input type="text" id="porcHombres" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>Porcentaje de mujeres:</td>
+                        <td><input type="text" id="porcMujeres" readonly></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Borrar Datos" onclick="borrarPorcentajes()"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+
+        <hr>
+
+        
+        <form name="form6">
+            <label>Cálculo de edad</label><br>
+            <div class="container-table">
+                <table class="table">
+                    <tr>
+                        <td>Año de nacimiento:</td>
+                        <td><input type="text" id="anioNac" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td>Año actual:</td>
+                        <td><input type="text" id="anioActual" onkeypress="return validarn(event)"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Calcular Edad" onclick="edadPersona()"></td>
+                    </tr>
+                    <tr>
+                        <td>Edad actual:</td>
+                        <td><input type="text" id="edad" readonly></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Borrar Datos" onclick="borrarEdad()"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+
     </div>
-    <script src="./js/funcionese1.js"></script>
+
+    <script src="./funciones1.js"></script>
 </body>
+<footer>
+    <a href="../index.html">Regresar al menú principal</a>
+</footer>
 </html>
