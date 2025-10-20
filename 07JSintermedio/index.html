@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ejercicios — Partes 2 (Sólo HTML)</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Ejercicios — Partes 2</h1>
+      <p>Entrega: venció ayer a las 23:59</p>
+    </header>
+    <section>
+      <h2>Dos números — múltiplos / resta / suma</h2>
+      <form id="form-ej1" method="post" action="#">
+        <div>
+          <label for="ej1-n1">Primer número</label>
+          <input id="ej1-n1" name="n1" type="number" step="any" placeholder="Ej: 12" required>
+        </div>
+        <div>
+          <label for="ej1-n2">Segundo número</label>
+          <input id="ej1-n2" name="n2" type="number" step="any" placeholder="Ej: 6" required>
+        </div>
+        <div>
+          <button type="submit">Calcular</button>
+          <button type="reset">Limpiar</button>
+        </div>
+        <div id="ej1-resultado" aria-live="polite"></div>
+      </form>
+      <p>Reglas: si son iguales indicar que son múltiplos; si primer > segundo mostrar resta; sino mostrar suma.</p>
+    </section>
+    <section>
+      <h2>Tres números distintos — imprimir el mayor</h2>
+      <form id="form-ej2" method="post" action="#">
+        <div>
+          <label for="ej2-a">Número A</label>
+          <input id="ej2-a" name="a" type="number" step="any" placeholder="Ej: 3" required>
+        </div>
+        <div>
+          <label for="ej2-b">Número B</label>
+          <input id="ej2-b" name="b" type="number" step="any" placeholder="Ej: 7" required>
+        </div>
+        <div>
+          <label for="ej2-c">Número C</label>
+          <input id="ej2-c" name="c" type="number" step="any" placeholder="Ej: 5" required>
+        </div>
+        <div>
+          <button type="submit">Mostrar mayor</button>
+          <button type="reset">Limpiar</button>
+        </div>
+
+        <div id="ej2-resultado" aria-live="polite"></div>
+      </form>
+      <p>Validación: los 3 números deben ser diferentes. Si no, mostrar error.</p>
+    </section>
+
+
+    <section>
+      <h2>Pago por horas extra</h2>
+      <form id="form-ej3" method="post" action="#">
+        <div>
+          <label for="ej3-salario">Salario mensual (p. ej. 12000)</label>
+          <input id="ej3-salario" name="salario" type="number" step="0.01" min="0" placeholder="Ej: 12000" required>
+        </div>
+        <div>
+          <label for="ej3-horas">Horas trabajadas (semana)</label>
+          <input id="ej3-horas" name="horas" type="number" step="0.1" min="0" placeholder="Ej: 50" required>
+        </div>
+        <div>
+          <button type="submit">Calcular horas extra</button>
+          <button type="reset">Limpiar</button>
+        </div>
+    
+        <div id="ej3-resultado" aria-live="polite"></div>
+      </form>
+      <p>Reglas: jornada normal 40 h/sem. Horas extra = horas - 40. Si horas extra ≤ 8 → pagadas al doble; si > 8 → primeras 8 al doble y el resto al triple. Tarifa/hora = salario mensual / 160 (40h * 4 semanas).</p>
+    </section>
+
+
+    <section>
+      <h2>Reparto de utilidades según antigüedad</h2>
+      <form id="form-ej4" method="post" action="#">
+        <div>
+          <label for="ej4-salario">Salario mensual</label>
+          <input id="ej4-salario" name="salarioU" type="number" step="0.01" min="0" placeholder="Ej: 15000" required>
+        </div>
+        <div>
+          <label for="ej4-antig">Antigüedad en años (puede ser decimal)</label>
+          <input id="ej4-antig" name="antiguedad" type="number" step="0.1" min="0" placeholder="Ej: 3.5" required>
+        </div>
+        <div>
+          <button type="submit">Calcular utilidad</button>
+          <button type="reset">Limpiar</button>
+        </div>
+
+        <div id="ej4-resultado" aria-live="polite"></div>
+      </form>
+      <p>Porcentajes:
+        <ul>
+          <li>menos de 1 año: 5%</li>
+          <li>1 a 2 años: 7%</li>
+          <li>2 a 5 años: 10%</li>
+          <li>5 a 10 años: 15%</li>
+          <li>más de 10 años: 20%</li>
+        </ul>
+        Aplicar porcentaje sobre salario mensual. Mostrar utilidad mensual y anual.
+      </p>
+    </section>
+
+    <footer>
+        <a href="../index.html">Regresar al menu principal</a>
+    </footer>
+  </main>
+</body>
+</html>
