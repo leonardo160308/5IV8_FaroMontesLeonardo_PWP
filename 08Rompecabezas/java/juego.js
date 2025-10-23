@@ -76,16 +76,154 @@ function intercambiarPosiciones(filaPos1, columnaPos1, filaPos2, columnaPos2){
 
 
 } 
+//actualizar la posicion de la pieza vacia
 
+function actualizarPosicionVacia(nuevaFila,nuevaColumna){
+    filaVacia=nuevaFila;
+    columnaVacia=nuevaColumna;
+}
 
+//necesitamos limitar las posiciones del rompecabezas
+function posicionValida(fila,columna){
+    return (fila>=0 && fila<=2 && columna>=0 && columna<=2);
+}
 
+//debemos crear una funcion que se encargue del movinmiento detectando el movimiento de las flechas de navegacion.
+//debemos crear una matriz de identificacion de los movimientos
+//arriba = 38
+//abajo = 40
+//izquierda = 37
+//derecha = 39
+var codigosDireccion={
+    IZQUIERDA:37,
+    ARRIBA:38,
+    DERECHA:39,
+    ABAJO:40    
+}//Formato JSON
 
+function moverEnDireccion(direccion){
+    var nuevaFilaPiezaVacia;
+    var nuevaColumnaPiezaVacia;
 
+    if(direccion===codigosDireccion.ABAJO){
+        nuevaFilaPiezaVacia=filaVacia + 1;
+        nuevaColumnaPiezaVacia=columnaVacia;
+    }
+    else if(direccion===codigosDireccion.ARRIBA){
+        nuevaFilaPiezaVacia=filaVacia - 1;
+        nuevaColumnaPiezaVacia=columnaVacia;
+    }
+    else if(direccion===codigosDireccion.DERECHA){
+        nuevaFilaPiezaVacia=filaVacia;
+        nuevaColumnaPiezaVacia=columnaVacia + 1;
+    }
+    else if(direccion===codigosDireccion.IZQUIERDA){
+        nuevaFilaPiezaVacia=filaVacia;
+        nuevaColumnaPiezaVacia=columnaVacia - 1;
+    }
+
+    //solo mando a llamar a que la posicion es valida
+    if(posicionValida(nuevaFilaPiezaVacia,nuevaColumnaPiezaVacia)){
+        //tengo que hacer una funcion qeu se encargue de intercambias las posiciones
+        intercambiarPosiciones(filaVacia,columnaVacia,
+        nuevaFilaPiezaVacia,nuevaColumnaPiezaVacia);
+        actualizarPosicionVacia(nuevaFilaPiezaVacia,nuevaColumnaPiezaVacia);
+        //guardar el ultimo movimiento
+        agregarUltimoMovimiento(direccion);
+    }
+}
+
+function intercambiarPosiciones(fila1, columna1, fila2, columna2){
+    var pieza1 = rompe[fila1,columna1];
+    var pieza2 = rompe[fila2,columna2];
+    //intercambio ya debe de ser por parte de los frames y el html
+    intercambiarPosicionesRompe(fila1,columna1,fila2,columna2);
+    //para el html
+    intercambiarPosicionesDOM('pieza'+ pieza1,'pieza' + pieza2);
+}
+//checar q pp
+function intercambiarPosicionesDOM(idPieza1,idPieza2){
+    var pieza1=document.getElementById(idPieza1);
+    var pieza2=document.getElementById(idPieza2);
+    //clonar las piezas
+    var padre=elementoPieza1.parentNode;
+    var padre2=elementoPieza2.parentNode;
+    //lo clono
+    var clonarElemento1=elementoPieza1.cloneNode(true);
+    var clonarElemento2=elementoPieza2.cloneNode(true);
+    //remplezar a los padres por sus clones
+    padre.replaceChild(clonarElemento1,elementoPieza2);
+    padre2.replaceChild(clonarElemento2,elementoPieza1);
+}
+
+function actualizarUltimoMovimiento(direccion){
+    var ultimoMovimiento=document.getElementById("flecha");
+    switch(direccion){
+        case codigosDireccion.ARRIBA:
+            ultimoMovimiento.textContent="↑";
+            break;
+        case codigosDireccion.ABAJO:
+            ultimoMovimiento.textContent="↓";
+            break;
+        case codigosDireccion.DERECHA:
+            ultimoMovimiento.textContent="→";
+            break;
+        case codigosDireccion.IZQUIERDA:
+            ultimoMovimiento.textContent="←";
+            break;
+    }
+}
+
+//poder mezclar las piezas del rompecabezas
+
+function mezclarPiezas(veces){
+    if(veces<=0){
+        alert("Asi no se puede");
+        return;
+}
+    var direcciones=[codigosDireccion.ABAJO,
+        codigosDireccion.ARRIBA,
+        codigosDireccion.DERECHA,
+        codigosDireccion.IZQUIERDA];
+
+    var direccion=direcciones[Math.floor(Math.random()*direcciones.length)];
+
+    moverEnDireccion(direccion);
+
+    setTimeout(function(){
+        mezclarPiezas(veces-1);
+    },100);
+
+    }
+
+    //necesitamos saber que teclas se estan presionando
+function capturarTeclas() {
+    document.body.onkeydown = function(evento) {
+        if(
+            evento.which === codigosDireccion.ARRIBA ||
+            evento.which === codigosDireccion.ABAJO ||
+            evento.which === codigosDireccion.DERECHA ||
+            evento.which === codigosDireccion.IZQUIERDA
+        ){
+            //saber si gane
+            var gano=checarsigano();
+            if(gano){
+                setTimeout(function(){
+                    mostrarCartelGanador();
+                },500);
+            }
+            evento.preventDefault();
+        }
+    };
+}
+
+    
 
 function iniciar(){
 //mezclar las piezas del rompecabezas
-
+mezclarPiezas(30);
+capturarTeclas();
 }
-
+iniciar();
 //mandamos a traeer a la funcion
-mostrarInstrucciones(instrucciones);
+mostrarInstrucciones(instrucciones)

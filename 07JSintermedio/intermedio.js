@@ -108,7 +108,7 @@ form1.addEventListener("submit", (e) => {
   const n2 = parseFloat(document.getElementById("ej1-n2").value);
 
   if (isNaN(n1) || isNaN(n2)) {
-    resultado1.textContent = "⚠️ Ingresa números válidos.";
+    resultado1.textContent = " Ingresa números válidos.";
     return;
   }
 
@@ -133,12 +133,12 @@ form2.addEventListener("submit", (e) => {
   const c = parseFloat(document.getElementById("ej2-c").value);
 
   if ([a, b, c].some(isNaN)) {
-    resultado2.textContent = "⚠️ Ingresa los tres números.";
+    resultado2.textContent = "Ingresa los tres números.";
     return;
   }
 
   if (a === b || a === c || b === c) {
-    resultado2.textContent = "⚠️ Los números deben ser diferentes.";
+    resultado2.textContent = "Los números deben ser diferentes.";
     return;
   }
 
@@ -157,7 +157,7 @@ form3.addEventListener("submit", (e) => {
   const horas = parseFloat(document.getElementById("ej3-horas").value);
 
   if (isNaN(salario) || isNaN(horas) || salario < 0 || horas < 0) {
-    resultado3.textContent = "⚠️ Ingresa valores positivos válidos.";
+    resultado3.textContent = "Ingresa valores positivos válidos.";
     return;
   }
 
@@ -176,7 +176,7 @@ form3.addEventListener("submit", (e) => {
   resultado3.textContent = `Tarifa/hora: $${tarifa.toFixed(2)} | Pago extra semanal: $${pagoExtra.toFixed(2)}`;
 });
 
-// ============= EJERCICIO 4 =============
+
 const form4 = document.getElementById("form-ej4");
 const resultado4 = document.getElementById("ej4-resultado");
 
@@ -187,7 +187,7 @@ form4.addEventListener("submit", (e) => {
   const antiguedad = parseFloat(document.getElementById("ej4-antig").value);
 
   if (isNaN(salario) || isNaN(antiguedad) || salario < 0 || antiguedad < 0) {
-    resultado4.textContent = "⚠️ Ingresa salario y antigüedad válidos.";
+    resultado4.textContent = "Ingresa salario y antigüedad válidos.";
     return;
   }
 
