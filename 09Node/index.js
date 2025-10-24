@@ -7,6 +7,7 @@ var servidor=http.createServer(function (req,res){
     res.writeHead(200,{'Content-Type':'text/html; charset=UTF-8'});
     res.write('<h1>Hola Mundo desde Node.js</h1>');
     res.write('<h1>A mimir</h1>');
+    res.write('<h1>A mimirx2</h1>');
     console.log('hola si entro al servidor');
     res.end();
 });
