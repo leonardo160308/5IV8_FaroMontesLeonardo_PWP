@@ -1,23 +1,21 @@
 # Dependencias
 node_modules/
 
-# Archivos de configuración locales y de entorno
+# Archivos de variables de entorno
 .env
-.env.local
-.env.*.local
+.env.*
 
-# Archivos de logs
-*.log
+# Archivos de compilación
+build/
+dist/
+
+# Archivos de registro y temporales
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+*.log
 
-# Archivos de caché
-.cache/
-
-# Archivos de sistema operativo
+# Archivos de sistema operativo y editores
 .DS_Store
-
-# Archivos de IDE
-.idea/
+Thumbs.db
 .vscode/
