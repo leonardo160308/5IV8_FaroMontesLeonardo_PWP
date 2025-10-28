@@ -222,3 +222,4 @@ function iniciar(){
 iniciar();
 //mostramos las instrucciones
 mostrarInstrucciones(instrucciones);
+//no se 
