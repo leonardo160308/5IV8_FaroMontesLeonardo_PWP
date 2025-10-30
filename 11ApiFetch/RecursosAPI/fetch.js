@@ -9,13 +9,14 @@ const pokeApiURL = 'https://pokeapi.co/api/v2/';
 const pokedex = () => {
     //primero necesitamos obtener todas las estadisticas del pokemon, asi que necesitamos crear un diccionario par aobtener cada uno de los elemtntos del frint para despues vaciar los datos
     const pokemonStatsElements = {
-        hp: document.getElementById('pokemonStatHP'),
-        attack: document.getElementById('pokemonStatAttack'),
-        defense: document.getElementById('pokemonStatDefense'),
-        specialAttack: document.getElementById('pokemonStatSpecialAttack'),
-        specialDefense: document.getElementById('pokemonStatSpecialDefense'),
-        speed: document.getElementById('pokemonStatSpeed'),
-    };
+    hp: document.getElementById('pokemonStatHp'),
+    attack: document.getElementById('pokemonStatAttack'),
+    defense: document.getElementById('pokemonStatDefense'),
+    specialAttack: document.getElementById('pokemonStatSpecialAttack'),
+    specialDefense: document.getElementById('pokemonStatSpecialDefense'),
+    speed: document.getElementById('pokemonStatSpeed'),
+};
+
     //necesitamos un auxiliar que nos permita utilizar la clase del tipo de pokemon  para cambiar la css dependiendo del tipo
     let currentClassType = null;
     //tiene que cambiar los elementos de la imagen, para ellos tenemos que crear un template que se encargue de encadenar los datos
@@ -49,7 +50,13 @@ const pokedex = () => {
         //primero necesitamos obtener el tipo de pokemon , el nombre, la clase, y el html, ya que tenemos eso, tendremos que obtener stats,moves, abilities
         let pokemonType = "";
         //utilizo una busqueda de la clase de pokemon, eso se refiere al tipo de contenido
-const firstClass = pokemonData.types?.[0]?.type?.name || "";
+        const firstClass = pokemonData.types[0].type.name;
+
+console.log("pokemonData:", pokemonData);
+console.log("pokemonData.types:", pokemonData.types);
+console.log("Primer tipo:", pokemonData.types?.[0]);
+console.log("Nombre del tipo:", firstClass);
+
 
         pokemonData.types.forEach((pokemonTypeData) => {
             //necesito obtener la etiqueta de cada cambio
