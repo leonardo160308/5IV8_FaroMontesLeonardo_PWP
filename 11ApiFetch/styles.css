@@ -249,3 +249,9 @@ ul {
 #pokemonAbilities li::before {
     content: "⛏️ ";
 }
+
+footer a{
+    color: greenyellow;
+    margin: 12pc;
+
+}
