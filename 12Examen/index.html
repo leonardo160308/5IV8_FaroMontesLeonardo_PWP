@@ -7,11 +7,105 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Buscador de Perros por Raza</h1>
-  
-  <div class="buscador">
-    <input type="text" id="raza" placeholder="Ejemplo: chihuahua">
-    <button id="buscar">Buscar</button>
+  <header>
+    <h1>Buscador de Perros por Raza</h1>
+  </header>
+
+  <div class="main">
+    <h2>Escribe o elige una raza</h2>
+    <div class="buscador">
+      <input list="razas" id="raza" placeholder="Ejemplo: bulldog/french">
+      <datalist id="razas">
+        <option value="affenpinscher">
+        <option value="african/wild">
+        <option value="airedale">
+        <option value="akita">
+        <option value="appenzeller">
+        <option value="australian/kelpie">
+        <option value="australian/shepherd">
+        <option value="bakharwal/indian">
+        <option value="basenji">
+        <option value="beagle">
+        <option value="bluetick">
+        <option value="borzoi">
+        <option value="bouvier">
+        <option value="boxer">
+        <option value="brabancon">
+        <option value="briard">
+        <option value="buhund/norwegian">
+        <option value="bulldog/boston">
+        <option value="bulldog/english">
+        <option value="bulldog/french">
+        <option value="bullterrier/staffordshire">
+        <option value="cattledog/australian">
+        <option value="cavapoo">
+        <option value="chihuahua">
+        <option value="chippiparai/indian">
+        <option value="chow">
+        <option value="clumber">
+        <option value="cockapoo">
+        <option value="collie/border">
+        <option value="coonhound">
+        <option value="corgi/cardigan">
+        <option value="cotondetulear">
+        <option value="dachshund">
+        <option value="dalmatian">
+        <option value="dane/great">
+        <option value="deerhound/scottish">
+        <option value="doberman">
+        <option value="elkhound/norwegian">
+        <option value="finnish/lapphund">
+        <option value="frise/bichon">
+        <option value="german/shepherd">
+        <option value="greyhound/italian">
+        <option value="hound/afghan">
+        <option value="hound/basset">
+        <option value="hound/blood">
+        <option value="hound/english">
+        <option value="hound/ibizan">
+        <option value="hound/plott">
+        <option value="hound/walker">
+        <option value="husky">
+        <option value="keeshond">
+        <option value="komondor">
+        <option value="kuvasz">
+        <option value="labrador">
+        <option value="malamute">
+        <option value="mastiff/english">
+        <option value="mastiff/tibetan">
+        <option value="mexicanhairless">
+        <option value="mountain/bernese">
+        <option value="newfoundland">
+        <option value="papillon">
+        <option value="pekinese">
+        <option value="pembroke">
+        <option value="pinscher/miniature">
+        <option value="pitbull">
+        <option value="pointer/german">
+        <option value="poodle/standard">
+        <option value="pug">
+        <option value="retriever/golden">
+        <option value="ridgeback/rhodesian">
+        <option value="rottweiler">
+        <option value="samoyed">
+        <option value="schnauzer/miniature">
+        <option value="setter/irish">
+        <option value="sharpei">
+        <option value="sheepdog/english">
+        <option value="shiba">
+        <option value="shihtzu">
+        <option value="spaniel/cocker">
+        <option value="spitz/japanese">
+        <option value="stbernard">
+        <option value="terrier/yorkshire">
+        <option value="vizsla">
+        <option value="waterdog/spanish">
+        <option value="weimaraner">
+        <option value="whippet">
+        <option value="wolfhound/irish">
+      </datalist>
+      <button id="buscar">Buscar</button>
+    </div>
   </div>
 
   <div id="resultado"></div>
