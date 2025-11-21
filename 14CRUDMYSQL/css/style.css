@@ -1,0 +1,97 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo: Fondo azul oscuro y centrado de elementos */
+body {
+    background-color: #020d3f;
+    color: #fff; /* Texto blanco para lo que esté fuera del form */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente */
+    padding-top: 3rem;   /* Espacio arriba */
+}
+
+/* Título principal (fuera de la tarjeta) */
+h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* El Formulario actúa como la tarjeta blanca (Container) */
+form {
+    background-color: #f9f9f9;
+    color: #333; /* Texto oscuro dentro de la tarjeta */
+    width: 90%;
+    max-width: 500px; /* Ancho máximo para que no se vea gigante */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5); /* Sombra para dar profundidad */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Etiquetas */
+label {
+    font-weight: bold;
+    color: #020d3f;
+    margin-bottom: 0.5rem;
+    margin-top: 1rem;
+}
+
+label:first-of-type {
+    margin-top: 0;
+}
+
+/* Campos de entrada */
+input[type="text"],
+input[type="number"] {
+    padding: 12px;
+    border: 2px solid #ddd; /* Borde sutil */
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+    background-color: #fff;
+}
+
+/* Efecto Focus (cuando escribes) */
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #020d3f;
+    background-color: #eef2ff; /* Un azul muy pálido al escribir */
+}
+
+/* Botón */
+button[type="submit"] {
+    margin-top: 2rem;
+    padding: 12px;
+    background-color: #020d3f;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+button[type="submit"]:hover {
+    background-color: #111c5d; /* Un poco más claro */
+}
+
+button[type="submit"]:active {
+    transform: scale(0.98);
+}
