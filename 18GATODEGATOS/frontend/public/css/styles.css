@@ -1,0 +1,107 @@
+/* ====================== BASE ====================== */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Personalizado2";
+    src: url(/font/Bytesized/Bytesized-Regular.ttf);
+}
+
+@font-face{
+    font-family:"Personalizado";
+    src: url(/font/BitcountPropSingleInk-VariableFont_CRSV,ELSH,ELXP,SZP1,SZP2,XPN1,XPN2,YPN1,YPN2,slnt,wght.ttf);
+}
+
+body {
+    background-color: #000;
+    color: #c400ff;
+    font-family: "Courier New", monospace;
+    text-align: center;
+}
+
+/* ====================== TÍTULOS ====================== */
+h1, h2 {
+    font-family: "Personalizado2", system-ui;
+    color: #ff00ff;
+    margin-bottom: 20px;
+    text-shadow: 
+        0 0 15px #c400ff,
+        0 0 10px #ff00ff,
+        0 0 25px #ff00ff;
+}
+
+/* ================== INPUT / BOTONES ================== */
+input{
+    background: #000;
+    color: #ff00ff;
+    border: 2px dashed #ff00ff;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    width: 200px;
+    outline: none;
+    text-shadow: 0 0 10px #ff00ff;
+    font-family: "Personalizado", monospace;
+}
+
+input::placeholder {
+    color: #9b00ff;
+    text-shadow: 0 0 5px #c400ff;
+}
+
+button{
+    padding: 10px 20px;
+    background: #000;
+    border: 2px dashed #ff00ff;
+    color: #ff00ff;
+    cursor: pointer;
+    font-size: 18px;
+    font-family: "Personalizado2";
+    text-shadow: 0 0 10px #ff00ff;
+    transition: .2s;
+}
+
+button:hover{
+    background: #ff00ff;
+    color: #000;
+    box-shadow: 0 0 20px #ff00ff;
+}
+
+/* ====================== TABLERO ====================== */
+#tablero{
+    margin: 20px auto;
+    width: 330px;
+    height: 330px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+}
+
+.celda{
+    background: #000;
+    border: 2px dashed #ff00ff;
+    font-size: 50px;
+    font-family: "Personalizado2";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-shadow: 0 0 15px #ff00ff;
+    transition: .2s;
+}
+
+.celda:hover{
+    background: #1b0025;
+    box-shadow: 0 0 15px #c400ff;
+}
+
+/* ====================== SCORE ====================== */
+#puntaje{
+    margin-top: 15px;
+    color:#ff00ff;
+    font-family:"Personalizado2";
+    text-shadow:0 0 10px #c400ff;
+}

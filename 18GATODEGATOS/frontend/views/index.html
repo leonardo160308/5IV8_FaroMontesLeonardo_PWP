@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Juego del Gato</title>
+    <link rel="stylesheet" href="../public/css/styles.css">
+</head>
+<body>
+
+    <h1>Juego del Gato</h1>
+
+    <div class="contenedor-juego">
+
+        <div class="info-jugador">
+            <label for="nombreJugador">Nombre del jugador:</label>
+            <input type="text" id="nombreJugador" placeholder="Escribe tu nombre">
+        </div>
+
+        <div id="tablero" class="tablero"></div>
+
+        <div class="panel-info">
+            <p id="info">Turno de: <b id="turnoTxt">X</b></p>
+            <button id="reiniciar">Reiniciar</button>
+            <p id="puntaje">Score: 0</p>
+        </div>
+
+    </div>
+
+    <script src="../public/js/game.js"></script>
+
+</body>
+</html>
